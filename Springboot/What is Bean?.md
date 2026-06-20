@@ -2,7 +2,6 @@
 A **Spring Bean** is simply a Java object that is instantiated, assembled, configured, and entirely managed by the Spring IoC (Inversion of Control) container, rather than by your application code using the standard `new` keyword.
 ## Explain
 In a traditional Java application, you control the lifecycle of your objects. If Class A needs Class B, you write `B b = new B();` inside Class A. This tightly couples your classes.
-
 Spring flips this responsibility using **Inversion of Control (IoC)**. You provide Spring with your classes and some configuration instructions (metadata), and Spring's container (the `ApplicationContext`) takes over.
 ### Why does Spring do this and how does it resolve your architecture problems?
 1. **Dependency Injection (DI):** Because Spring manages the objects (Beans), it can automatically inject dependencies where they are needed. If your `UserService` bean needs a `UserRepository` bean, Spring spots this and wires them together at startup.
