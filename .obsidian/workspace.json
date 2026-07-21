@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e34f147e102fcf46",
+        "id": "bd277ad3f8033e86",
         "type": "tabs",
         "children": [
           {
-            "id": "8fa57489c1a5a2da",
+            "id": "5c5ea5e4665e7175",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Tại sao phải dùng WebSocket?"
             }
           }
         ]
@@ -40,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Trình duyệt tệp"
             }
           },
           {
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 200
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -171,32 +175,49 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Mở bộ chuyển đổi nhanh": false,
+      "graph:Mở xem biểu đồ": false,
+      "canvas:Tạo bảng mới": false,
+      "daily-notes:Mở ghi chú hôm nay": false,
+      "templates:Chèn mẫu": false,
+      "command-palette:Mở khay lệnh": false,
+      "bases:Tạo cơ sở mới": false
     }
   },
-  "active": "8fa57489c1a5a2da",
+  "active": "5c5ea5e4665e7175",
   "lastOpenFiles": [
-    "Springboot/Hikari Connection Pooling.md",
-    "NextJs/What is the advantage of nextjs with react?.md",
-    "UI UX/UI UX principles.md",
-    "NextJs/How do the Next.js serve a page under the hood?.md",
-    "React/React lifecycle.md",
-    "Docker/Caching Layer.md",
-    "Nginx/Nginx usages and what can it do in production project?.md",
-    "UI UX",
-    "Docker",
-    "NextJs",
-    "React",
-    "Springboot/What is Bean?.md",
-    "Nginx",
-    "Environment Variables.md",
-    "Springboot/Untitled",
-    "Springboot"
+    "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
+    "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
+    "Common/Languages/JavaScript/Variable & Hoisting.md",
+    "2.jpg",
+    "Common/Languages/JavaScript/Variable.md",
+    "Common/Pooling/Pooling.md",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
+    "_assets",
+    "Common/Server Send Event/_temp.md",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
+    "Thuật ngữ và từ viết tắt.md",
+    "Frontend/Zustand/_temp.md",
+    "Frontend/Zustand",
+    "Chưa đặt tên.canvas",
+    "Backend/NestJS/_temp.md",
+    "Common/Languages/Typescript/_temp.md",
+    "Backend/NestJS",
+    "Common/Languages",
+    "Common/Languages/Typescript",
+    "Common/Languages/JavaScript",
+    "Common/Pooling",
+    "Common/Server Send Event",
+    "Common",
+    "Infrastructure",
+    "Infrastructure/Docker/Caching Layer.md",
+    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
+    "Backend/Springboot/Hikari Connection Pooling.md",
+    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
+    "Frontend/UI UX/UI UX principles.md",
+    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
+    "Frontend/React/React lifecycle.md",
+    "Backend/Springboot/What is Bean?.md",
+    "Environment Variables.md"
   ]
 }
