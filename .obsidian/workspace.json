@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "bd277ad3f8033e86",
+        "id": "89f410013b02a1c0",
         "type": "tabs",
         "children": [
           {
-            "id": "5c5ea5e4665e7175",
+            "id": "3c0a6f75b25b9a76",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
-                "mode": "source",
-                "source": false
+                "file": "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png"
               },
-              "icon": "lucide-file",
-              "title": "Tại sao phải dùng WebSocket?"
+              "icon": "lucide-image",
+              "title": "Ảnh màn hình 2026-07-21 lúc 10.12.11"
             }
           }
         ]
@@ -44,7 +42,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Trình duyệt tệp"
+              "title": "Files"
             }
           },
           {
@@ -78,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 255.5
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -175,49 +173,54 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Mở bộ chuyển đổi nhanh": false,
-      "graph:Mở xem biểu đồ": false,
-      "canvas:Tạo bảng mới": false,
-      "daily-notes:Mở ghi chú hôm nay": false,
-      "templates:Chèn mẫu": false,
-      "command-palette:Mở khay lệnh": false,
-      "bases:Tạo cơ sở mới": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "5c5ea5e4665e7175",
+  "active": "3c0a6f75b25b9a76",
   "lastOpenFiles": [
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
+    "Common/Languages/JavaScript/Variable & Hoisting.md",
+    "Thuật ngữ và từ viết tắt.md",
+    "_assets/var variables lifecycle.jpg",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
+    "Nginx/Nginx usages and what can it do in production project?.md",
+    "_assets",
+    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
+    "Infrastructure/Docker/Caching Layer.md",
+    "Infrastructure/Nginx",
+    "Infrastructure/Docker",
+    "Infrastructure",
+    "Frontend/Zustand/_temp.md",
+    "Frontend/UI UX/UI UX principles.md",
+    "Frontend/React/React lifecycle.md",
+    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
+    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
+    "Frontend/Zustand",
+    "Frontend/UI UX",
+    "Frontend/React",
+    "Frontend/NextJs",
+    "Frontend",
+    "Common/Languages/Typescript/_temp.md",
     "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
     "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
-    "Common/Languages/JavaScript/Variable & Hoisting.md",
-    "2.jpg",
-    "Common/Languages/JavaScript/Variable.md",
-    "Common/Pooling/Pooling.md",
-    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
-    "_assets",
     "Common/Server Send Event/_temp.md",
-    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
-    "Thuật ngữ và từ viết tắt.md",
-    "Frontend/Zustand/_temp.md",
-    "Frontend/Zustand",
-    "Chưa đặt tên.canvas",
-    "Backend/NestJS/_temp.md",
-    "Common/Languages/Typescript/_temp.md",
-    "Backend/NestJS",
-    "Common/Languages",
     "Common/Languages/Typescript",
-    "Common/Languages/JavaScript",
-    "Common/Pooling",
-    "Common/Server Send Event",
-    "Common",
-    "Infrastructure",
-    "Infrastructure/Docker/Caching Layer.md",
-    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
-    "Backend/Springboot/Hikari Connection Pooling.md",
-    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
-    "Frontend/UI UX/UI UX principles.md",
-    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
-    "Frontend/React/React lifecycle.md",
+    "Common/Pooling/Pooling.md",
     "Backend/Springboot/What is Bean?.md",
-    "Environment Variables.md"
+    "Backend/Springboot/Hikari Connection Pooling.md",
+    "Backend/NestJS/_temp.md",
+    "Docker/Caching Layer.md",
+    "Jobs.md",
+    "Springboot/Hikari Connection Pooling.md",
+    "NextJs/What is the advantage of nextjs with react?.md",
+    "UI UX/UI UX principles.md",
+    "NextJs/How do the Next.js serve a page under the hood?.md",
+    "React/React lifecycle.md"
   ]
 }
