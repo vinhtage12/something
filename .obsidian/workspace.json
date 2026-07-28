@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "89f410013b02a1c0",
+        "id": "77044d3f497b4569",
         "type": "tabs",
         "children": [
           {
-            "id": "3c0a6f75b25b9a76",
+            "id": "65a9cc9a0a8a85fa",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png"
-              },
-              "icon": "lucide-image",
-              "title": "Ảnh màn hình 2026-07-21 lúc 10.12.11"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -182,15 +180,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "3c0a6f75b25b9a76",
+  "active": "65a9cc9a0a8a85fa",
   "lastOpenFiles": [
-    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
-    "Common/Languages/JavaScript/Variable & Hoisting.md",
-    "Thuật ngữ và từ viết tắt.md",
-    "_assets/var variables lifecycle.jpg",
+    "React/React memo.md",
+    "Frontend/React/React memo.md",
     "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
-    "Nginx/Nginx usages and what can it do in production project?.md",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
+    "_assets/var variables lifecycle.jpg",
     "_assets",
+    "Thuật ngữ và từ viết tắt.md",
     "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
     "Infrastructure/Docker/Caching Layer.md",
     "Infrastructure/Nginx",
@@ -207,20 +205,21 @@
     "Frontend/NextJs",
     "Frontend",
     "Common/Languages/Typescript/_temp.md",
+    "Common/Languages/JavaScript/Variable & Hoisting.md",
     "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
     "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
     "Common/Server Send Event/_temp.md",
-    "Common/Languages/Typescript",
     "Common/Pooling/Pooling.md",
+    "Common/Languages/Typescript",
     "Backend/Springboot/What is Bean?.md",
     "Backend/Springboot/Hikari Connection Pooling.md",
     "Backend/NestJS/_temp.md",
-    "Docker/Caching Layer.md",
-    "Jobs.md",
+    "Temporary.md",
     "Springboot/Hikari Connection Pooling.md",
-    "NextJs/What is the advantage of nextjs with react?.md",
     "UI UX/UI UX principles.md",
-    "NextJs/How do the Next.js serve a page under the hood?.md",
-    "React/React lifecycle.md"
+    "Springboot/What is Bean?.md",
+    "React/React lifecycle.md",
+    "Nginx/Nginx usages and what can it do in production project?.md",
+    "NextJs/What is the advantage of nextjs with react?.md"
   ]
 }
