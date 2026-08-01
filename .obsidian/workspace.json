@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Testing/Unit Test.md",
+                "file": "Security/DRM (Bảo vệ bản quyền nội dung số).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Unit Test"
+              "title": "DRM (Bảo vệ bản quyền nội dung số)"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -186,8 +188,10 @@
   },
   "active": "65a9cc9a0a8a85fa",
   "lastOpenFiles": [
-    "Testing/Fundamentals.md",
     "Testing/Unit Test.md",
+    "Security/DRM (Bảo vệ bản quyền nội dung số).md",
+    "Security",
+    "Testing/Fundamentals.md",
     "Untitled.md",
     "Infrastructure/Docker/Caching Layer.md",
     "Testing",
@@ -211,7 +215,6 @@
     "Frontend/UI UX",
     "Frontend/React",
     "Frontend/NextJs",
-    "Frontend",
     "Common/Languages/Typescript/_temp.md",
     "Common/Languages/JavaScript/Variable & Hoisting.md",
     "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
@@ -223,7 +226,6 @@
     "Backend/NestJS/_temp.md",
     "Temporary.md",
     "Springboot/Hikari Connection Pooling.md",
-    "UI UX/UI UX principles.md",
-    "Springboot/What is Bean?.md"
+    "UI UX/UI UX principles.md"
   ]
 }
