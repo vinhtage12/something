@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "77044d3f497b4569",
+        "id": "bd277ad3f8033e86",
         "type": "tabs",
         "children": [
           {
-            "id": "65a9cc9a0a8a85fa",
+            "id": "5c5ea5e4665e7175",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/DRM (Bảo vệ bản quyền nội dung số).md",
+                "file": "Common/Network/Cookie.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DRM (Bảo vệ bản quyền nội dung số)"
+              "title": "Cookie"
             }
           }
         ]
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Trình duyệt tệp"
             }
           },
           {
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -177,55 +178,56 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Mở bộ chuyển đổi nhanh": false,
+      "graph:Mở xem biểu đồ": false,
+      "canvas:Tạo bảng mới": false,
+      "daily-notes:Mở ghi chú hôm nay": false,
+      "templates:Chèn mẫu": false,
+      "command-palette:Mở khay lệnh": false,
+      "bases:Tạo cơ sở mới": false
     }
   },
-  "active": "65a9cc9a0a8a85fa",
+  "active": "5c5ea5e4665e7175",
   "lastOpenFiles": [
-    "Testing/Unit Test.md",
-    "Security/DRM (Bảo vệ bản quyền nội dung số).md",
-    "Security",
-    "Testing/Fundamentals.md",
-    "Untitled.md",
-    "Infrastructure/Docker/Caching Layer.md",
-    "Testing",
-    "Frontend/Zustand/_temp.md",
-    "Frontend/React/React memo.md",
-    "React/React memo.md",
-    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
-    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
-    "_assets/var variables lifecycle.jpg",
-    "_assets",
     "Thuật ngữ và từ viết tắt.md",
-    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
-    "Infrastructure/Nginx",
-    "Infrastructure/Docker",
-    "Infrastructure",
-    "Frontend/UI UX/UI UX principles.md",
-    "Frontend/React/React lifecycle.md",
-    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
-    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
-    "Frontend/Zustand",
-    "Frontend/UI UX",
-    "Frontend/React",
-    "Frontend/NextJs",
-    "Common/Languages/Typescript/_temp.md",
-    "Common/Languages/JavaScript/Variable & Hoisting.md",
+    "Common/Network/Cookie.md",
+    "Common/Network/HTTP.md",
+    "Common/Network",
+    "Security/DRM (Bảo vệ bản quyền nội dung số).md",
+    "Testing/Unit Test.md",
+    "Testing/Fundamentals.md",
     "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
     "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
+    "Security",
+    "2.jpg",
+    "_assets/var variables lifecycle.jpg",
+    "Testing",
+    "Frontend/React/React memo.md",
     "Common/Server Send Event/_temp.md",
     "Common/Pooling/Pooling.md",
-    "Backend/Springboot/What is Bean?.md",
-    "Backend/Springboot/Hikari Connection Pooling.md",
+    "Common/Languages/Typescript/_temp.md",
+    "Common/Languages/JavaScript/Variable & Hoisting.md",
+    "Common/Languages/JavaScript/Variable.md",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
+    "_assets",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
+    "Frontend/Zustand/_temp.md",
+    "Frontend/Zustand",
+    "Chưa đặt tên.canvas",
     "Backend/NestJS/_temp.md",
-    "Temporary.md",
-    "Springboot/Hikari Connection Pooling.md",
-    "UI UX/UI UX principles.md"
+    "Backend/NestJS",
+    "Common/Languages",
+    "Common/Languages/Typescript",
+    "Common/Languages/JavaScript",
+    "Common/Pooling",
+    "Infrastructure/Docker/Caching Layer.md",
+    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
+    "Backend/Springboot/Hikari Connection Pooling.md",
+    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
+    "Frontend/UI UX/UI UX principles.md",
+    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
+    "Frontend/React/React lifecycle.md",
+    "Backend/Springboot/What is Bean?.md",
+    "Environment Variables.md"
   ]
 }
