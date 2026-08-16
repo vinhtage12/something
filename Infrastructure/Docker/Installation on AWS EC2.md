@@ -37,196 +37,18 @@
 	sudo apt install ca-certificates curl
 ```
 [Docker's official Ubuntu installation instructions use these prerequisites.](https://docs.docker.com/engine/install/ubuntu/?utm_source=chatgpt.com)
-
-Absolutely. For an **AWS EC2 instance running Ubuntu**, I recommend installing **Docker Engine from Docker's official APT repository**, not Ubuntu's `docker.io` package. This gives you Docker Engine, Buildx, and the modern Docker Compose plugin, and is the approach Docker documents for Ubuntu. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
-I'll walk you through this as if you're setting up an EC2 server for a real application.
-
-## 0. What we're going to build
-
-The end state will look roughly like this:
-
-```text
-AWS EC2
-└── Ubuntu
-    ├── Docker Engine
-    │   ├── containerd
-    │   ├── Docker CLI
-    │   ├── Buildx
-    │   └── Docker Compose
-    │
-    ├── Docker network(s)
-    │
-    ├── Containers
-    │   ├── your application
-    │   ├── database
-    │   └── nginx/reverse proxy
-    │
-    └── Persistent Docker volumes
-```
-
-We'll also configure:
-
-- Docker to start automatically after reboot
-    
-- your Ubuntu user to run Docker without `sudo`
-    
-- Docker Compose
-    
-- basic security
-    
-- storage/logging considerations
-    
-- EC2 networking/security groups
-    
-- a test container
-    
-- a sample application deployment
-    
-- troubleshooting commands
-    
-
----
-
-# 1. SSH into your EC2 instance
-
-From your local computer:
-
-```bash
-ssh -i your-key.pem ubuntu@YOUR_EC2_PUBLIC_IP
-```
-
-For example:
-
-```bash
-ssh -i my-server.pem ubuntu@54.123.45.67
-```
-
-If you are using an EC2 instance created from an Ubuntu AMI, the default username is normally:
-
-```text
-ubuntu
-```
-
-Once connected, confirm you're actually on Ubuntu:
-
-```bash
-cat /etc/os-release
-```
-
-You should see something similar to:
-
-```text
-NAME="Ubuntu"
-VERSION="24.04.3 LTS (Noble Numbat)"
-```
-
-Also check your architecture:
-
-```bash
-dpkg --print-architecture
-```
-
-Typical EC2 results are:
-
-```text
-amd64
-```
-
-or, for Graviton instances:
-
-```text
-arm64
-```
-
-Docker currently supports both on Ubuntu. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
----
-
-# 2. Check the EC2 resources
-
-Before installing Docker, check disk space:
-
-```bash
-df -h
-```
-
-And memory:
-
-```bash
-free -h
-```
-
-And CPU:
-
-```bash
-nproc
-```
-
-For example:
-
-```text
-Filesystem      Size  Used Avail Use%
-/dev/root        20G  3.2G   17G  16%
-```
-
-Docker images, containers, build cache, and volumes can consume significant disk space.
-
-For a production application, don't blindly assume a tiny root disk will be sufficient.
-
----
-
-# 3. Update Ubuntu
-
-First:
-
-```bash
-sudo apt update
-```
-
-Then:
-
-```bash
-sudo apt upgrade -y
-```
-
-I also recommend:
-
-```bash
-sudo apt install -y ca-certificates curl
-```
-
-Docker's official Ubuntu installation instructions use these prerequisites. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
----
-
-# 4. Remove conflicting Docker packages
-
+# Remove conflicting Docker packages
 This is important.
-
 Ubuntu may have packages such as:
-
 - `docker.io`
-    
 - `docker-compose`
-    
 - `docker-compose-v2`
-    
 - `docker-doc`
-    
 - `docker-buildx`
-    
 - `podman-docker`
-    
 - `containerd`
-    
 - `runc`
-    
-
 Docker recommends removing conflicting packages before installing Docker Engine from its repository. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
-Run:
-
 ```bash
 sudo apt remove -y \
   docker.io \
@@ -240,18 +62,15 @@ sudo apt remove -y \
 ```
 
 If Ubuntu says some packages aren't installed, that's fine.
-
 **Important:** removing these packages does not automatically remove Docker's `/var/lib/docker` data. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
----
-
 # 5. Add Docker's official GPG key
-
 Create the keyring directory:
-
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
 ```
+
+> `keyring directory` dùng để lưu các GPG key của Docker repository. Docker ký các package/repository metatdata bằng GPG key. Máy của bạn cần public key tương ứng để kiểm tra: "Package này thực sự đến từ Docker và chưa bị sửa đổi đúng không?"
+> Các key đó thường được lưu ở `/etc/apt/keyrings/docker.asc` hoặc `/etc/apt/keyrings/docker.gpg`
 
 Download Docker's official signing key:
 
