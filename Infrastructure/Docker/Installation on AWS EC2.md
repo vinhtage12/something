@@ -63,7 +63,7 @@ sudo apt remove -y \
 
 If Ubuntu says some packages aren't installed, that's fine.
 **Important:** removing these packages does not automatically remove Docker's `/var/lib/docker` data. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-# 5. Add Docker's official GPG key
+# Add Docker's official GPG key
 Create the keyring directory:
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -87,12 +87,10 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 ---
 
-# 6. Add Docker's official APT repository
+# Add Docker's official APT repository
 
 This is preferable to using Ubuntu's potentially older Docker package.
-
 Run:
-
 ```bash
 sudo tee /etc/apt/sources.list.d/docker.sources > /dev/null <<EOF
 Types: deb
@@ -111,9 +109,7 @@ sudo apt update
 ```
 
 Docker's current documentation uses this repository configuration. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
 You can verify the repository:
-
 ```bash
 apt-cache policy docker-ce
 ```
@@ -122,10 +118,9 @@ You should see Docker's repository in the output.
 
 ---
 
-# 7. Install Docker Engine
+# Install Docker Engine
 
 Now install:
-
 ```bash
 sudo apt install -y \
   docker-ce \
@@ -149,7 +144,7 @@ This is the package set recommended by Docker's current Ubuntu instructions. ([D
 
 ---
 
-# 8. Check Docker service
+# Check Docker service
 
 Run:
 
@@ -177,7 +172,7 @@ sudo systemctl status docker
 
 ---
 
-# 9. Make sure Docker starts after EC2 reboot
+# Make sure Docker starts after EC2 reboot
 
 This is important for a server.
 
@@ -209,7 +204,7 @@ Docker documents systemd startup configuration as part of its Linux post-install
 
 ---
 
-# 10. Test Docker
+# Test Docker
 
 Run:
 
@@ -248,7 +243,7 @@ At this point **Docker Engine is successfully installed**. ([Docker Documentatio
 
 ---
 
-# 11. Configure your `ubuntu` user to use Docker
+# Configure your `ubuntu` user to use Docker
 
 Currently you'll need:
 
@@ -282,7 +277,7 @@ Docker's documentation recommends adding the user to the `docker` group for non-
 
 ---
 
-# 12. Log out and reconnect
+# Log out and reconnect
 
 This step is frequently forgotten.
 
@@ -326,12 +321,10 @@ docker run hello-world
 
 ---
 
-# 13. Important Docker security warning
+# Important Docker security warning
 
 There is an important security implication here.
-
 Membership in the `docker` group effectively grants very high privileges on the host. Docker's own documentation warns that the Docker daemon runs with root privileges and access to its socket gives powerful control over the host. ([Docker Documentation](https://docs.docker.com/engine/install/linux-postinstall?utm_source=chatgpt.com "Linux post-installation steps for Docker Engine | Docker Docs"))
-
 So:
 
 ```bash
@@ -339,14 +332,12 @@ sudo usermod -aG docker ubuntu
 ```
 
 is convenient, but don't treat Docker group membership as an ordinary low-privilege permission.
-
 For a normal single-user EC2 application server, it's commonly used.
-
 For a highly locked-down environment, consider Docker rootless mode or another architecture.
 
 ---
 
-# 14. Verify Docker Compose
+# Verify Docker Compose
 
 Because we installed the Compose plugin, the modern command is:
 
@@ -376,7 +367,7 @@ The former is the current Compose plugin approach.
 
 ---
 
-# 15. Understand the difference
+# Understand the difference
 
 You'll encounter these commands constantly:
 
@@ -395,7 +386,6 @@ docker compose up
 ```
 
 Manages a multi-container application defined in `compose.yaml` / `docker-compose.yml`.
-
 For example:
 
 ```text
@@ -411,7 +401,7 @@ Compose can manage all of them together.
 
 ---
 
-# 16. Create your first real container
+# Create your first real container
 
 Let's run Nginx.
 
@@ -451,7 +441,7 @@ container port 80
 
 ---
 
-# 17. Test Nginx from the EC2 server
+# Test Nginx from the EC2 server
 
 Run:
 
@@ -460,7 +450,6 @@ curl http://localhost:8080
 ```
 
 You should get HTML from Nginx.
-
 You can also check:
 
 ```bash
@@ -469,10 +458,9 @@ docker logs nginx-test
 
 ---
 
-# 18. Configure the AWS Security Group
+# Configure the AWS Security Group
 
 This is where EC2 differs from a normal Linux server.
-
 Suppose your Docker container exposes:
 
 ```text
@@ -486,7 +474,6 @@ Docker is listening on:
 ```
 
 But AWS still has its **Security Group** in front of the instance.
-
 You need an inbound rule allowing traffic to that port if you want the Internet to reach it.
 
 For example:
@@ -514,7 +501,7 @@ Do **not** open SSH to the entire Internet unless you have a specific reason.
 
 ---
 
-# 19. Don't expose application ports unnecessarily
+# Don't expose application ports unnecessarily
 
 A common beginner setup is:
 
@@ -529,7 +516,6 @@ TCP 3000 -> 0.0.0.0/0
 ```
 
 That works, but it's usually not how I'd structure a production web server.
-
 A better architecture is:
 
 ```text
@@ -552,7 +538,6 @@ AWS Security Group
 ```
 
 Then your application doesn't need to be directly exposed to the Internet.
-
 For example:
 
 ```text
@@ -569,10 +554,9 @@ API container :3000
 
 ---
 
-# 20. Docker ports vs AWS Security Groups
+# Docker ports vs AWS Security Groups
 
 This distinction is extremely important.
-
 Suppose you run:
 
 ```bash
@@ -586,7 +570,6 @@ EC2:8080 → Container:80
 ```
 
 But AWS Security Groups determine whether external traffic can reach EC2:8080.
-
 So you need **both**:
 
 ```text
@@ -606,12 +589,10 @@ Container:80
 
 ---
 
-# 21. Be careful with UFW on Docker hosts
+# Be careful with UFW on Docker hosts
 
 This is a particularly important security issue.
-
 Docker's documentation warns that published Docker ports can bypass normal UFW/firewalld expectations. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
 So don't assume:
 
 ```bash
@@ -619,14 +600,12 @@ sudo ufw deny 8080
 ```
 
 necessarily gives you the protection you expect from Docker-published ports.
-
 On EC2, your **AWS Security Group** should be part of your primary network access-control design.
-
 For more sophisticated firewall rules, Docker recommends working with the `DOCKER-USER` chain rather than assuming ordinary firewall rules will behave as expected. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
 
 ---
 
-# 22. Stop the test container
+# Stop the test container
 
 Once you've verified it:
 
@@ -648,10 +627,9 @@ docker ps -a
 
 ---
 
-# 23. Learn the essential Docker commands
+# Learn the essential Docker commands
 
 These are the commands you'll use constantly.
-
 ### List running containers
 
 ```bash
@@ -732,7 +710,7 @@ docker exec -it CONTAINER sh
 
 ---
 
-# 24. Understand Docker storage
+# Understand Docker storage
 
 Docker stores its data primarily under:
 
@@ -775,12 +753,10 @@ Now the database data lives in a Docker volume rather than only inside the conta
 
 ---
 
-# 25. Understand the container lifecycle
+# Understand the container lifecycle
 
 This is one of the most important Docker concepts.
-
 A container is **not** a VM.
-
 For example:
 
 ```text
@@ -795,7 +771,6 @@ Container
 ```
 
 If the container dies, you can create another container from the same image.
-
 Persistent data should generally live in:
 
 ```text
@@ -812,7 +787,7 @@ rather than relying on the container itself.
 
 ---
 
-# 26. Use Docker Compose for real applications
+# Use Docker Compose for real applications
 
 Suppose you have:
 
@@ -902,7 +877,7 @@ docker compose up -d
 
 ---
 
-# 27. Don't put production passwords directly in Compose
+# Don't put production passwords directly in Compose
 
 For learning, this is okay:
 
@@ -911,28 +886,20 @@ POSTGRES_PASSWORD: password
 ```
 
 For production, don't do this.
-
 Instead consider:
-
 - AWS Secrets Manager
-    
 - AWS Systems Manager Parameter Store
-    
 - Docker secrets where appropriate
-    
 - environment files with carefully controlled permissions
-    
 - a managed database such as Amazon RDS
-    
 
 For an EC2 production environment, I would generally avoid putting important credentials directly into a Git repository.
 
 ---
 
-# 28. Configure container restart policies
+# Configure container restart policies
 
 For production services, you normally want containers to come back after a crash or server reboot.
-
 For example:
 
 ```yaml
@@ -955,7 +922,7 @@ for many application deployments.
 
 ---
 
-# 29. Monitor Docker disk usage
+# Monitor Docker disk usage
 
 Run:
 
@@ -964,7 +931,6 @@ docker system df
 ```
 
 This shows Docker's disk consumption.
-
 You can inspect:
 
 ```bash
@@ -990,7 +956,6 @@ docker system prune
 ```
 
 It can delete unused Docker resources.
-
 Don't blindly run:
 
 ```bash
@@ -998,12 +963,11 @@ docker system prune -a --volumes
 ```
 
 on a production server.
-
 You can accidentally remove data you intended to keep.
 
 ---
 
-# 30. Check Docker logs
+# Check Docker logs
 
 If an application isn't working:
 
@@ -1043,7 +1007,7 @@ docker compose logs -f api
 
 ---
 
-# 31. Check Docker's service logs
+# Check Docker's service logs
 
 If Docker itself is having problems:
 
@@ -1077,7 +1041,7 @@ sudo systemctl restart docker
 
 ---
 
-# 32. Test reboot persistence
+# Test reboot persistence
 
 Once you've configured your actual application, you should test:
 
@@ -1086,9 +1050,7 @@ sudo reboot
 ```
 
 Your SSH connection will terminate.
-
 Wait a little and reconnect.
-
 Then:
 
 ```bash
@@ -1105,7 +1067,7 @@ Your containers configured with an appropriate restart policy should come back a
 
 ---
 
-# 33. EC2 architecture I'd recommend
+# EC2 architecture I'd recommend
 
 For a typical small production web application:
 
@@ -1157,7 +1119,7 @@ Those services should normally be private.
 
 ---
 
-# 34. EC2 Security Group baseline
+# EC2 Security Group baseline
 
 For a normal web server:
 
@@ -1180,7 +1142,7 @@ Avoid:
 
 ---
 
-# 35. One more important EC2 consideration: architecture
+# One more important EC2 consideration: architecture
 
 If your EC2 instance is:
 
@@ -1191,7 +1153,6 @@ c7g
 ```
 
 etc., it is likely **ARM64/Graviton**.
-
 Check:
 
 ```bash
@@ -1205,7 +1166,6 @@ aarch64
 ```
 
 you're on ARM64.
-
 If:
 
 ```text
@@ -1213,9 +1173,7 @@ x86_64
 ```
 
 you're on AMD64/x86.
-
 Docker itself supports both, but **your application images must also support the architecture**. Docker's Ubuntu documentation lists both amd64 and arm64 among supported architectures. ([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?pStoreID=massmutualn&utm_source=chatgpt.com "Install Docker Engine on Ubuntu | Docker Docs"))
-
 For example, an image might support:
 
 ```text
@@ -1227,7 +1185,7 @@ or only one of them.
 
 ---
 
-# 36. Useful final verification
+# Useful final verification
 
 Run this whole set:
 
@@ -1269,44 +1227,9 @@ If all of those work, your Docker installation is in good shape.
 
 ---
 
-## 37. Official documentation
+## Official documentation
 
 For reference, Docker's current official Ubuntu installation guide is here:
-
 [Docker Engine — Install on Ubuntu](https://docs.docker.com/engine/install/ubuntu/?utm_source=chatgpt.com)
-
 And the Linux post-installation guide:
-
 [Docker Linux post-installation steps](https://docs.docker.com/engine/install/linux-postinstall?utm_source=chatgpt.com)
-
----
-
-## What I recommend we do next
-
-If this EC2 is for **deploying your actual application**, don't stop at installing Docker. The next setup should be:
-
-```text
-EC2 Ubuntu
-   ↓
-Docker
-   ↓
-Docker Compose
-   ↓
-Application container
-   ↓
-Nginx / reverse proxy
-   ↓
-HTTPS / Let's Encrypt
-   ↓
-Domain name
-   ↓
-Automatic container restart
-   ↓
-Persistent volumes
-   ↓
-Logs + monitoring
-   ↓
-Backups
-```
-
-If you tell me **what application you're deploying** (for example **Node.js, Python/FastAPI, Django, Laravel, Java/Spring, React + API, etc.**) and whether you have a **domain name**, I can walk you through the complete EC2 → Docker → Compose → Nginx → HTTPS production deployment step by step.
