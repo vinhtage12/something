@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "77044d3f497b4569",
+        "id": "d907c834cb3217be",
         "type": "tabs",
         "children": [
           {
-            "id": "65a9cc9a0a8a85fa",
+            "id": "c366e8022900f2ac",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infrastructure/Docker/Docker cheatsheet.md",
+                "file": "Infrastructure/Linux/File system.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Docker cheatsheet"
+              "title": "File system"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -187,10 +186,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "65a9cc9a0a8a85fa",
+  "active": "c366e8022900f2ac",
   "lastOpenFiles": [
-    "Infrastructure/Docker/Installation on AWS EC2.md",
+    "Infrastructure/Linux/File system.md",
+    "Infrastructure/Linux",
+    "Infrastructure/Docker/Docker compose.md",
     "Infrastructure/Docker/Docker cheatsheet.md",
+    "Infrastructure/Docker/Installation on AWS EC2.md",
     "DevOps/CI CD/Github Actions.md",
     "DevOps/CI CD",
     "DevOps",
@@ -220,13 +222,9 @@
     "Frontend/React/React lifecycle.md",
     "Frontend/NextJs/What is the advantage of nextjs with react?.md",
     "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
-    "Frontend/Zustand",
     "Common/Languages/Typescript/_temp.md",
     "Common/Languages/JavaScript/Variable & Hoisting.md",
     "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
-    "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
-    "Common/Server Send Event/_temp.md",
-    "Common/Pooling/Pooling.md",
-    "Backend/Springboot/What is Bean?.md"
+    "Common/Web Socket/Tại sao phải dùng WebSocket?.md"
   ]
 }
