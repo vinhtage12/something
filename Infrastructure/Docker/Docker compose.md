@@ -56,10 +56,44 @@ docker volume inspect <volume_name>
 ---
 ### driver_opts
 
-> [!Khái niệm]
+> [!NOTE] Khái niệm
 > Là các options được truyền vào cho driver đã chọn. Nó không có bộ key cố định mà bộ key sẽ phụ thuộc vào loại driver đã chọn
 
 Đối với đoạn code phía trên,
 - `type`: xác định filesystem type
 - `o`: mount options
-- `device`: người của storage/device cần mount
+- `device`: người của storage/device cần mount. *Nếu đường path này chưa tồn tại trên máy thì lệnh docker compose up sẽ lỗi*
+
+> Dữ liệu của database nên được lưu trong `/var/lib/<your-app>/data`
+
+# `entrypoint`
+
+> [!NOTE] Khái niệm 
+> Lệnh đầu tiên được chạy sau khi container được khởi động
+## So với `command`
+Có thể hiểu đơn giản: 
+- **`entrypoint`** = “chương trình chính của container là gì?”
+- **`command`** = “đưa arguments gì cho chương trình đó?”
+Ví dụ:
+```yaml
+services:
+  app:
+    image: python:3.12
+    entrypoint: ["python"]
+    command: ["app.py"]
+```
+
+→ chạy:
+```bash
+python app.py
+```
+
+Nếu đổi:
+```yaml
+command: ["test.py"]
+```
+
+→ chạy:
+```bash
+python test.py
+```

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infrastructure/Linux/File system.md",
+                "file": "Infrastructure/Redis/Các config nên được sử dụng (redis.conf).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File system"
+              "title": "Các config nên được sử dụng (redis.conf)"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -188,9 +189,11 @@
   },
   "active": "c366e8022900f2ac",
   "lastOpenFiles": [
+    "Infrastructure/Docker/Docker compose.md",
+    "Infrastructure/Redis/Các config nên được sử dụng (redis.conf).md",
+    "Infrastructure/Redis",
     "Infrastructure/Linux/File system.md",
     "Infrastructure/Linux",
-    "Infrastructure/Docker/Docker compose.md",
     "Infrastructure/Docker/Docker cheatsheet.md",
     "Infrastructure/Docker/Installation on AWS EC2.md",
     "DevOps/CI CD/Github Actions.md",
@@ -217,7 +220,6 @@
     "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
     "Infrastructure/Nginx",
     "Infrastructure/Docker",
-    "Infrastructure",
     "Frontend/UI UX/UI UX principles.md",
     "Frontend/React/React lifecycle.md",
     "Frontend/NextJs/What is the advantage of nextjs with react?.md",
