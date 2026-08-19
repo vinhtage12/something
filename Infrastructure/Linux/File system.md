@@ -1,3 +1,11 @@
+# Table of contents
+
+1. [Cấu trúc dễ nhớ](#C%E1%BA%A5u%20tr%C3%BAc%20d%E1%BB%85%20nh%E1%BB%9B)
+2. [3 directory đặc biệt cần hiểu kỹ](#3%20directory%20%C4%91%E1%BA%B7c%20bi%E1%BB%87t%20c%E1%BA%A7n%20hi%E1%BB%83u%20k%E1%BB%B9)
+	1. [**`/etc` — cấu hình**](#**%60/etc%60%20%E2%80%94%20c%E1%BA%A5u%20h%C3%ACnh**)
+	2. [**`/var` — dữ liệu thay đổi**](#**%60/var%60%20%E2%80%94%20d%E1%BB%AF%20li%E1%BB%87u%20thay%20%C4%91%E1%BB%95i**)
+	3. [**`/usr` — phần lớn chương trình của hệ thống**](#**%60/usr%60%20%E2%80%94%20ph%E1%BA%A7n%20l%E1%BB%9Bn%20ch%C6%B0%C6%A1ng%20tr%C3%ACnh%20c%E1%BB%A7a%20h%E1%BB%87%20th%E1%BB%91ng**)
+
 
 | Directory     | Công dụng                                                                                                  |
 | ------------- | ---------------------------------------------------------------------------------------------------------- |

@@ -1,3 +1,58 @@
+# Table of contents
+
+1. [Verifing and Check Resource of EC2](#Verifing%20and%20Check%20Resource%20of%20EC2)
+	1. [1. Verifying](#1.%20Verifying)
+	2. [2. Check resource](#2.%20Check%20resource)
+2. [Update Ubuntu](#Update%20Ubuntu)
+3. [Remove conflicting Docker packages](#Remove%20conflicting%20Docker%20packages)
+4. [Add Docker's official GPG key](#Add%20Docker's%20official%20GPG%20key)
+5. [Add Docker's official APT repository](#Add%20Docker's%20official%20APT%20repository)
+6. [Install Docker Engine](#Install%20Docker%20Engine)
+7. [Check Docker service](#Check%20Docker%20service)
+8. [Make sure Docker starts after EC2 reboot](#Make%20sure%20Docker%20starts%20after%20EC2%20reboot)
+9. [Test Docker](#Test%20Docker)
+10. [Configure your `ubuntu` user to use Docker](#Configure%20your%20%60ubuntu%60%20user%20to%20use%20Docker)
+11. [Log out and reconnect](#Log%20out%20and%20reconnect)
+12. [Important Docker security warning](#Important%20Docker%20security%20warning)
+13. [Verify Docker Compose](#Verify%20Docker%20Compose)
+14. [Understand the difference](#Understand%20the%20difference)
+	1. [Docker](#Docker)
+	2. [Docker Compose](#Docker%20Compose)
+15. [Create your first real container](#Create%20your%20first%20real%20container)
+16. [Test Nginx from the EC2 server](#Test%20Nginx%20from%20the%20EC2%20server)
+17. [Configure the AWS Security Group](#Configure%20the%20AWS%20Security%20Group)
+18. [Don't expose application ports unnecessarily](#Don't%20expose%20application%20ports%20unnecessarily)
+19. [Docker ports vs AWS Security Groups](#Docker%20ports%20vs%20AWS%20Security%20Groups)
+20. [Be careful with UFW on Docker hosts](#Be%20careful%20with%20UFW%20on%20Docker%20hosts)
+21. [Stop the test container](#Stop%20the%20test%20container)
+22. [Learn the essential Docker commands](#Learn%20the%20essential%20Docker%20commands)
+	1. [List running containers](#List%20running%20containers)
+	2. [List all containers](#List%20all%20containers)
+	3. [Start a container](#Start%20a%20container)
+	4. [Stop a container](#Stop%20a%20container)
+	5. [Restart](#Restart)
+	6. [Remove](#Remove)
+	7. [List images](#List%20images)
+	8. [Download an image](#Download%20an%20image)
+	9. [Delete an image](#Delete%20an%20image)
+	10. [View logs](#View%20logs)
+	11. [Follow logs](#Follow%20logs)
+	12. [Execute a command inside container](#Execute%20a%20command%20inside%20container)
+23. [Understand Docker storage](#Understand%20Docker%20storage)
+24. [Understand the container lifecycle](#Understand%20the%20container%20lifecycle)
+25. [Use Docker Compose for real applications](#Use%20Docker%20Compose%20for%20real%20applications)
+26. [Don't put production passwords directly in Compose](#Don't%20put%20production%20passwords%20directly%20in%20Compose)
+27. [Configure container restart policies](#Configure%20container%20restart%20policies)
+28. [Monitor Docker disk usage](#Monitor%20Docker%20disk%20usage)
+29. [Check Docker logs](#Check%20Docker%20logs)
+30. [Check Docker's service logs](#Check%20Docker's%20service%20logs)
+31. [Test reboot persistence](#Test%20reboot%20persistence)
+32. [EC2 architecture I'd recommend](#EC2%20architecture%20I'd%20recommend)
+33. [EC2 Security Group baseline](#EC2%20Security%20Group%20baseline)
+34. [One more important EC2 consideration: architecture](#One%20more%20important%20EC2%20consideration:%20architecture)
+35. [Useful final verification](#Useful%20final%20verification)
+	1. [Official documentation](#Official%20documentation)
+
 # Verifing and Check Resource of EC2
 ## 1. Verifying
 - Check OS release:
@@ -371,7 +426,7 @@ The former is the current Compose plugin approach.
 
 You'll encounter these commands constantly:
 
-### Docker
+## Docker
 
 ```bash
 docker ps
@@ -379,7 +434,7 @@ docker ps
 
 Manages individual containers.
 
-### Docker Compose
+## Docker Compose
 
 ```bash
 docker compose up
@@ -630,73 +685,73 @@ docker ps -a
 # Learn the essential Docker commands
 
 These are the commands you'll use constantly.
-### List running containers
+## List running containers
 
 ```bash
 docker ps
 ```
 
-### List all containers
+## List all containers
 
 ```bash
 docker ps -a
 ```
 
-### Start a container
+## Start a container
 
 ```bash
 docker start CONTAINER
 ```
 
-### Stop a container
+## Stop a container
 
 ```bash
 docker stop CONTAINER
 ```
 
-### Restart
+## Restart
 
 ```bash
 docker restart CONTAINER
 ```
 
-### Remove
+## Remove
 
 ```bash
 docker rm CONTAINER
 ```
 
-### List images
+## List images
 
 ```bash
 docker images
 ```
 
-### Download an image
+## Download an image
 
 ```bash
 docker pull nginx:alpine
 ```
 
-### Delete an image
+## Delete an image
 
 ```bash
 docker rmi IMAGE
 ```
 
-### View logs
+## View logs
 
 ```bash
 docker logs CONTAINER
 ```
 
-### Follow logs
+## Follow logs
 
 ```bash
 docker logs -f CONTAINER
 ```
 
-### Execute a command inside container
+## Execute a command inside container
 
 ```bash
 docker exec -it CONTAINER bash

@@ -1,3 +1,13 @@
+# Table of contents
+
+1. [Xóa hết các container đang không chạy](#X%C3%B3a%20h%E1%BA%BFt%20c%C3%A1c%20container%20%C4%91ang%20kh%C3%B4ng%20ch%E1%BA%A1y)
+2. [Xóa tất cả image mà không có container nào dùng](#X%C3%B3a%20t%E1%BA%A5t%20c%E1%BA%A3%20image%20m%C3%A0%20kh%C3%B4ng%20c%C3%B3%20container%20n%C3%A0o%20d%C3%B9ng)
+3. [Xóa tất cả các volume mà không có container nào dùng](#X%C3%B3a%20t%E1%BA%A5t%20c%E1%BA%A3%20c%C3%A1c%20volume%20m%C3%A0%20kh%C3%B4ng%20c%C3%B3%20container%20n%C3%A0o%20d%C3%B9ng)
+	1. [Ý nghĩa](#%C3%9D%20ngh%C4%A9a)
+4. [Xóa sạch toàn bộ container, image, volume, network](#X%C3%B3a%20s%E1%BA%A1ch%20to%C3%A0n%20b%E1%BB%99%20container,%20image,%20volume,%20network)
+	1. [⚠️ Cực kỳ lưu ý](#%E2%9A%A0%EF%B8%8F%20C%E1%BB%B1c%20k%E1%BB%B3%20l%C6%B0u%20%C3%BD)
+
+
 # Xóa hết các container đang không chạy
 ```bash
 docker container prune 
@@ -45,7 +55,7 @@ Không hỏi xác nhận:
 docker volume prune -f
 ```
 
-### Ý nghĩa
+## Ý nghĩa
 - `docker volume prune` → xóa các **unused volumes**.
 - `-f` / `--force` → không yêu cầu xác nhận.
 Nếu muốn xem volume hiện có trước:
@@ -83,7 +93,7 @@ docker system prune -a --volumes -f
 - `-a` / `--all` → xóa **tất cả image không được container nào sử dụng**, không chỉ dangling images.
 - `--volumes` → xóa cả **unused volumes**.
 - `-f` / `--force` → không hỏi xác nhận.
-### ⚠️ Cực kỳ lưu ý
+## ⚠️ Cực kỳ lưu ý
 Lệnh:
 ```bash
 docker system prune -a --volumes -f

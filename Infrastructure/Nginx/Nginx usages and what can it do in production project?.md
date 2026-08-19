@@ -1,3 +1,15 @@
+# Table of contents
+
+1. [Overview](#Overview)
+2. [Nginx in Production: The Swiss Army Knife of Infrastructure](#Nginx%20in%20Production:%20The%20Swiss%20Army%20Knife%20of%20Infrastructure)
+	1. [Short answer](#Short%20answer)
+	2. [Explain](#Explain)
+		1. [The Core Problem: Application Servers are Fragile](#The%20Core%20Problem:%20Application%20Servers%20are%20Fragile)
+		2. [How Nginx Resolves It](#How%20Nginx%20Resolves%20It)
+	3. [Mindset Check: The "Why Not Just Use My App Server?" Fallacy](#Mindset%20Check:%20The%20%22Why%20Not%20Just%20Use%20My%20App%20Server?%22%20Fallacy)
+	4. [Master Tips for Production](#Master%20Tips%20for%20Production)
+	5. [Research & Referenced Documents](#Research%20&%20Referenced%20Documents)
+
 ## Overview
 In a production environment, Nginx acts as the **shield, traffic cop, and accelerator** for your application. Its primary roles are:
 1. **Reverse Proxy & SSL/TLS Termination:** Sanitizing and decrypting traffic before it hits your app.
