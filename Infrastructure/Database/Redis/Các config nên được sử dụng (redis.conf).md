@@ -1117,6 +1117,17 @@ Chooses eviction at `maxmemory`: `volatile-lru`, `allkeys-lru`,
 `volatile-ttl`, or `noeviction`. LRU, LFU, and TTL are approximate randomized
 algorithms; if no eligible key exists, writes requiring memory fail.
 
+| Policy            | Có TTL | Không TTL | Cách chọn key |
+| ----------------- | :----: | :-------: | ------------- |
+| `noeviction`      |   ❌    |     ❌     | Không xóa     |
+| `allkeys-lru`     |   ✅    |     ✅     | LRU           |
+| `volatile-lru`    |   ✅    |     ❌     | LRU           |
+| `allkeys-lfu`     |   ✅    |     ✅     | LFU           |
+| `volatile-lfu`    |   ✅    |     ❌     | LFU           |
+| `allkeys-random`  |   ✅    |     ✅     | Random        |
+| `volatile-random` |   ✅    |     ❌     | Random        |
+| `volatile-ttl`    |   ✅    |     ❌     | TTL nhỏ nhất  |
+
 ```conf
 maxmemory-policy noeviction
 ```

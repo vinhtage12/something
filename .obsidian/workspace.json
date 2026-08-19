@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Frontend/Zustand/_temp.md",
+                "file": "DevOps/Makefile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_temp"
+              "title": "Makefile"
             }
           }
         ]
@@ -188,23 +188,24 @@
   },
   "active": "5c5ea5e4665e7175",
   "lastOpenFiles": [
+    "Infrastructure/Docker/Docker compose.md",
+    "DevOps/Makefile.md",
+    "Infrastructure/Database/Redis/Các config nên được sử dụng (redis.conf).md",
+    "Thuật ngữ và từ viết tắt.md",
+    "Frontend/Zustand/_temp.md",
     "Frontend/UI UX/UI UX principles.md",
     "Testing/Unit Test.md",
     "Testing/Fundamentals.md",
     "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
     "Infrastructure/Linux/File system.md",
     "Infrastructure/Docker/Installation on AWS EC2.md",
-    "Infrastructure/Docker/Docker compose.md",
     "Infrastructure/Docker/Docker cheatsheet.md",
-    "Infrastructure/Database/Redis/Các config nên được sử dụng (redis.conf).md",
     "Infrastructure/Docker/Caching Layer.md",
-    "Thuật ngữ và từ viết tắt.md",
     "Infrastructure/Database/Redis",
     "Infrastructure/Linux",
     "Security/DRM (Bảo vệ bản quyền nội dung số).md",
     "Frontend/NextJs/What is the advantage of nextjs with react?.md",
     "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
-    "Frontend/Zustand/_temp.md",
     "Frontend/React/React lifecycle.md",
     "Frontend/React/React memo.md",
     "DevOps/CI CD/Github Actions.md",
@@ -222,7 +223,6 @@
     "Common/Server Send Event/_temp.md",
     "Common/Pooling/Pooling.md",
     "Common/Languages/Typescript/_temp.md",
-    "Common/Languages/JavaScript/Variable & Hoisting.md",
     "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
     "_assets",
     "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",

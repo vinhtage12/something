@@ -6,6 +6,8 @@
 		2. [driver_opts](#driver_opts)
 2. [`entrypoint`](#%60entrypoint%60)
 	1. [So với `command`](#So%20v%E1%BB%9Bi%20%60command%60)
+3. [`tmpfs`](#%60tmpfs%60)
+
 
 # `volumes`
 ```yaml
@@ -106,3 +108,14 @@ command: ["test.py"]
 ```bash
 python test.py
 ```
+# `tmpfs`
+> [!NOTE] Khái niệm
+> **mount một filesystem nằm hoàn toàn trong RAM**, thay vì lưu dữ liệu trên disk của host.
+
+Nó dùng để làm gì?
+- **Dữ liệu tạm thời**: cache, temporary files, file xử lý trung gian.
+- **Tăng tốc I/O**: RAM nhanh hơn disk, hữu ích khi ứng dụng đọc/ghi rất nhiều file tạm.
+- **Không để dữ liệu nhạy cảm xuống disk**: ví dụ temporary credentials, session data, secret trung gian.
+- **Tự động mất dữ liệu khi container dừng/xóa**: dữ liệu trong `tmpfs` không được persist.
+
+> **Lưu ý:** `tmpfs` không có nghĩa là dữ liệu chắc chắn không bao giờ được swap xuống disk; việc đó còn phụ thuộc vào cấu hình hệ điều hành.
