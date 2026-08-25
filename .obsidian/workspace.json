@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bd277ad3f8033e86",
+        "id": "89f410013b02a1c0",
         "type": "tabs",
         "children": [
           {
-            "id": "5c5ea5e4665e7175",
+            "id": "3c0a6f75b25b9a76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/Makefile.md",
+                "file": "Infrastructure/Nginx/File System của nginx.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Makefile"
+              "title": "File System của nginx"
             }
           }
         ]
@@ -46,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Trình duyệt tệp"
+              "title": "Files"
             }
           },
           {
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 255.5,
+    "collapsed": true
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -177,57 +178,55 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Mở bộ chuyển đổi nhanh": false,
-      "graph:Mở xem biểu đồ": false,
-      "canvas:Tạo bảng mới": false,
-      "daily-notes:Mở ghi chú hôm nay": false,
-      "templates:Chèn mẫu": false,
-      "command-palette:Mở khay lệnh": false,
-      "bases:Tạo cơ sở mới": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "5c5ea5e4665e7175",
+  "active": "3c0a6f75b25b9a76",
   "lastOpenFiles": [
-    "Infrastructure/Docker/Docker compose.md",
-    "DevOps/Makefile.md",
-    "Infrastructure/Database/Redis/Các config nên được sử dụng (redis.conf).md",
-    "Thuật ngữ và từ viết tắt.md",
-    "Frontend/Zustand/_temp.md",
-    "Frontend/UI UX/UI UX principles.md",
+    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
+    "Infrastructure/Nginx/File System của nginx.md",
+    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
     "Testing/Unit Test.md",
     "Testing/Fundamentals.md",
-    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
-    "Infrastructure/Linux/File system.md",
-    "Infrastructure/Docker/Installation on AWS EC2.md",
-    "Infrastructure/Docker/Docker cheatsheet.md",
-    "Infrastructure/Docker/Caching Layer.md",
-    "Infrastructure/Database/Redis",
-    "Infrastructure/Linux",
+    "Testing",
     "Security/DRM (Bảo vệ bản quyền nội dung số).md",
-    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
-    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
-    "Frontend/React/React lifecycle.md",
+    "Security",
+    "Infrastructure/Linux/File system.md",
+    "Infrastructure/Linux",
+    "Infrastructure/Docker/Installation on AWS EC2.md",
+    "Infrastructure/Docker/Docker compose.md",
+    "Infrastructure/Docker/Docker cheatsheet.md",
+    "Infrastructure/Database/Redis/Các config nên được sử dụng (redis.conf).md",
+    "Infrastructure/Database/Redis",
+    "Infrastructure/Database",
     "Frontend/React/React memo.md",
     "DevOps/CI CD/Github Actions.md",
-    "Common/Network/Cookie.md",
+    "DevOps/Makefile.md",
     "DevOps/CI CD",
     "DevOps",
     "Common/Network/HTTP.md",
+    "Common/Network/Cookie.md",
     "Common/Network",
-    "Common/Web Socket/WebRTC data channel cho peer-to-peer.md",
-    "Common/Web Socket/Tại sao phải dùng WebSocket?.md",
-    "Security",
-    "2.jpg",
-    "_assets/var variables lifecycle.jpg",
-    "Testing",
-    "Common/Server Send Event/_temp.md",
-    "Common/Pooling/Pooling.md",
-    "Common/Languages/Typescript/_temp.md",
     "_assets/Ảnh màn hình 2026-07-21 lúc 10.03.56.png",
+    "Common/Languages/JavaScript/Variable & Hoisting.md",
+    "Thuật ngữ và từ viết tắt.md",
+    "_assets/var variables lifecycle.jpg",
+    "Nginx/Nginx usages and what can it do in production project?.md",
     "_assets",
-    "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
-    "Frontend/Zustand",
-    "Chưa đặt tên.canvas",
-    "Backend/NestJS"
+    "Infrastructure/Docker/Caching Layer.md",
+    "Infrastructure/Nginx",
+    "Frontend/Zustand/_temp.md",
+    "Frontend/UI UX/UI UX principles.md",
+    "Frontend/React/React lifecycle.md",
+    "Frontend/NextJs/What is the advantage of nextjs with react?.md",
+    "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
+    "Common/Languages/Typescript/_temp.md",
+    "Common/Web Socket/WebRTC data channel cho peer-to-peer.md"
   ]
 }
