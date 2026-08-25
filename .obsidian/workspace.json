@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infrastructure/Nginx/File System của nginx.md",
+                "file": "Infrastructure/Docker/Docker compose.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File System của nginx"
+              "title": "Docker compose"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.5,
-    "collapsed": true
+    "width": 255.5
   },
   "right": {
     "id": "5cf4bcbe2bb3f7a4",
@@ -189,8 +188,9 @@
   },
   "active": "3c0a6f75b25b9a76",
   "lastOpenFiles": [
-    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
     "Infrastructure/Nginx/File System của nginx.md",
+    "Untitled.md",
+    "Infrastructure/Nginx/Nginx usages and what can it do in production project?.md",
     "_assets/Ảnh màn hình 2026-07-21 lúc 10.12.11.png",
     "Testing/Unit Test.md",
     "Testing/Fundamentals.md",
@@ -226,7 +226,6 @@
     "Frontend/React/React lifecycle.md",
     "Frontend/NextJs/What is the advantage of nextjs with react?.md",
     "Frontend/NextJs/How do the Next.js serve a page under the hood?.md",
-    "Common/Languages/Typescript/_temp.md",
-    "Common/Web Socket/WebRTC data channel cho peer-to-peer.md"
+    "Common/Languages/Typescript/_temp.md"
   ]
 }
